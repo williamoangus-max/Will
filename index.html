@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#071a3d">
+  <title>886 Squadron | Support Us</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #101820;
+      background: #eef1f5;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #061633 0%, #0b2a5b 55%, #123d78 100%);
+      color: white;
+      text-align: center;
+      padding: 42px 20px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 50%;
+      right: -150px;
+      top: -170px;
+    }
+
+    .roundel {
+      width: 112px;
+      height: 112px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      background:
+        radial-gradient(circle,
+          #ce1126 0 30%,
+          #fff 30% 50%,
+          #1671b9 50% 100%);
+      box-shadow: 0 5px 22px rgba(0,0,0,.28);
+      border: 3px solid rgba(255,255,255,.9);
+    }
+
+    .hero .eyebrow {
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+      opacity: .82;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 8vw, 54px);
+      letter-spacing: .5px;
+    }
+
+    .hero p {
+      margin: 10px auto 0;
+      max-width: 600px;
+      font-size: 17px;
+      line-height: 1.5;
+      opacity: .9;
+    }
+
+    main {
+      width: min(900px, calc(100% - 32px));
+      margin: -25px auto 45px;
+      position: relative;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 10px 35px rgba(7, 26, 61, .13);
+      padding: 30px;
+      margin-bottom: 22px;
+    }
+
+    .card h2 {
+      margin: 0 0 12px;
+      color: #071a3d;
+      font-size: 28px;
+    }
+
+    .card p {
+      color: #4b5563;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .donations {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .donate {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 62px;
+      padding: 14px 18px;
+      border-radius: 11px;
+      text-decoration: none;
+      color: white;
+      background: #0b3b78;
+      font-size: 19px;
+      font-weight: 700;
+      border: 0;
+      box-shadow: 0 4px 0 #061f43;
+      transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+    }
+
+    .donate:hover {
+      background: #12549e;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 #061f43;
+    }
+
+    .donate:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 #061f43;
+    }
+
+    .donate.custom {
+      grid-column: 1 / -1;
+      background: #c8102e;
+      box-shadow: 0 4px 0 #7f071b;
+    }
+
+    .donate.custom:hover {
+      background: #e01939;
+      box-shadow: 0 6px 0 #7f071b;
+    }
+
+    .amount {
+      display: block;
+      font-size: 24px;
+    }
+
+    .description {
+      display: block;
+      font-size: 12px;
+      font-weight: 400;
+      opacity: .9;
+      margin-top: 2px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .info {
+      background: #f4f6f9;
+      border-left: 4px solid #0b3b78;
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    .info strong {
+      display: block;
+      color: #071a3d;
+      margin-bottom: 5px;
+    }
+
+    .info span {
+      color: #5c6673;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .secure {
+      text-align: center;
+      font-size: 13px;
+      color: #697586;
+      margin-top: 18px;
+    }
+
+    footer {
+      background: #061633;
+      color: rgba(255,255,255,.75);
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 13px;
+    }
+
+    footer strong { color: white; }
+
+    @media (max-width: 650px) {
+      .hero { padding-top: 32px; }
+      .card { padding: 24px 18px; }
+      .donations { grid-template-columns: 1fr; }
+      .donate.custom { grid-column: auto; }
+      .info-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="hero">
+    <div class="roundel" aria-label="RAF-style roundel"></div>
+    <p class="eyebrow">Royal Air Force Air Cadets</p>
+    <h1>886 Squadron</h1>
+    <p>Support our cadets and help us provide training, activities and new opportunities.</p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Support 886 Squadron</h2>
+      <p>
+        If you would like to support 886 Squadron, you can make a contribution
+        using one of the options below. Every donation helps support the
+        opportunities and activities available to our cadets.
+      </p>
+
+      <div class="donations">
+        <!-- CUSTOM AMOUNT -->
+        <a class="donate custom"
+           href="https://buy.stripe.com/7sYaEYaOG9EJdNl41N93y07"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span>
+            <span class="amount">Custom Amount</span>
+            <span class="description">Choose your own donation amount</span>
+          </span>
+        </a>
+
+        <!-- £5 -->
+        <a class="donate"
+           href="https://buy.stripe.com/dRmbJ2bSK7wBbFdeGr93y05"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span>
+            <span class="amount">Donate £5</span>
+            <span class="description">Small contribution</span>
+          </span>
+        </a>
+
+        <!-- £10 -->
+        <a class="donate"
+           href="https://buy.stripe.com/3cI14of4W7wBbFd2XJ93y04"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span>
+            <span class="amount">Donate £10</span>
+            <span class="description">Support squadron activities</span>
+          </span>
+        </a>
+
+        <!-- £20 -->
+        <a class="donate"
+           href="https://buy.stripe.com/dRm7sM8Gy4kpfVt1TF93y03"
+           target="_blank"
+           rel="noopener noreferrer">
+          <span>
+            <span class="amount">Donate £20</span>
+            <span class="description">Make a larger contribution</span>
+          </span>
+        </a>
+      </div>
+
+      <p class="secure">Payments are processed securely through Stripe.</p>
+    </section>
+
+    <section class="card">
+      <h2>Where your support helps</h2>
+
+      <div class="info-grid">
+        <div class="info">
+          <strong>Training</strong>
+          <span>Support the training and development opportunities available to cadets.</span>
+        </div>
+
+        <div class="info">
+          <strong>Activities</strong>
+          <span>Help support activities, events and experiences for the squadron.</span>
+        </div>
+
+        <div class="info">
+          <strong>Opportunities</strong>
+          <span>Help us continue providing worthwhile opportunities for our cadets.</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>886 Squadron</strong><br>
+    Royal Air Force Air Cadets
+  </footer>
+
+</body>
+</html>
